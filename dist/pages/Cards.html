@@ -14,25 +14,6 @@
                     .dropdown__div-apply="Применить"
 
 
--->
-<!--mixin search-form()
-.search-form
-    .search-form__head="Найдём номера под ваши пожелания"
-    .search-form__date-dropdowns
-        .search-form__arrival
-            //.search-form__arrival-content="Прибытие"
-            .search-form__date-dropdown-arrival
-                +date-dropdown("dd1")
-        //.search-form__departure
-            .search-form__departure-content="Выезд"
-            .search-form__date-dropdown-departure
-                +date-dropdown("dd2")
-    .search-form__guests="Гости"
-    //.search-form__dropdown-guests
-        +dropdown(['взрослые', 'дети', 'младенцы'])
-    .search-form__button-arrow-search
-        +button-arrow("подобрать номер")
-
 --><!DOCTYPE html>
 <html>
   <head>
@@ -138,12 +119,55 @@
       <div class="cards__search-form">
         <div class="search-form">
           <div class="search-form__head">Найдём номера под ваши пожелания</div>
-          <div class="search-form__arrival">Прибытие</div>
           <div class="search-form__date-dropdowns">
-            <div class="date-dropdown">
-              <input class="date-dropdown__input date-dropdown__input_dd1" data-toggle="datepicker_dd1" id="date-field1_dd1" type="text" placeholder="ДД.ММ.ГГГГ"><span class="date-dropdown__span-icons date-dropdown__span-icons_dd1">keyboard_arrow_down</span>
+            <div class="search-form__arrival">
+              <div class="search-form__arrival-content">Прибытие</div>
+              <div class="search-form__date-dropdown-arrival">
+                <div class="date-dropdown">
+                  <input class="date-dropdown__input date-dropdown__input_dd1" data-toggle="datepicker_dd1" id="date-field1_dd1" type="text" placeholder="ДД.ММ.ГГГГ"><span class="date-dropdown__span-icons date-dropdown__span-icons_dd1">keyboard_arrow_down</span>
+                </div>
+              </div>
+            </div>
+            <div class="search-form__departure">
+              <div class="search-form__departure-content">Выезд</div>
+              <div class="search-form__date-dropdown-departure">
+                <div class="date-dropdown">
+                  <input class="date-dropdown__input date-dropdown__input_dd2" data-toggle="datepicker_dd2" id="date-field1_dd2" type="text" placeholder="ДД.ММ.ГГГГ"><span class="date-dropdown__span-icons date-dropdown__span-icons_dd2">keyboard_arrow_down</span>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="search-form__guests">Гости</div>
+          <div class="search-form__dropdown-guests">
+            <div class="iqdropdown">
+              <div class="iqdropdown-selection" data-seletion-text="гостя" data-text-plural="гостей"></div>
+              <div class="iqdropdown-menu">
+                <div class="iqdropdown-menu-option" data-id="item1">
+                  <div>
+                    <div class="iqdropdown-item">взрослые</div>
+                  </div>
+                </div>
+                <div class="iqdropdown-menu-option" data-id="item2">
+                  <div>
+                    <div class="iqdropdown-item">дети</div>
+                  </div>
+                </div>
+                <div class="iqdropdown-menu-option" data-id="item3">
+                  <div>
+                    <div class="iqdropdown-item">младенцы</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-form__button-arrow-search">
+            <button class="button-arrow"><span class="button-arrow__span_content">подобрать номер</span><span class="button-arrow__span_icon">arrow_forward</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="cards__calendar">
+        <div class="calendar">
+          <div class="calendar__div datepicker-here"></div>
         </div>
       </div>
     </div>
